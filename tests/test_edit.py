@@ -3,14 +3,12 @@ import pytest
 
 
 @pytest.mark.parametrize('oldname, newname, oldprice, newprice, info, url', [
-    ('Бэтмобиль', 'Бэтмобиль', '300000', '30000', 'Совсем как настоящий и точно не битый',
-     'https://avatars.mds.yandex.net/get-vertis-journal/4469561/2019-10-03-61eb0625626a4f379b15b42b50acdc56'
-     '.jpg_1622735939741/orig'),
-    ('Бэтмобиль', 'Бэтмобиль', '2600', '5000', 'А вот этот уже не совсем настоящий',
-     'https://main-cdn.sbermegamarket.ru/big2/hlr-system/1657928/100000377360b0.jpg'),
-    ('RTX 5080', 'БУ RTX 5080', '160000', '16000', 'Уже сгорела',
-     'https://17.img.avito.st/image/1/1.CI4Mgba6pGc6KGZiEPErxNQiomO4oqylvSKgb7gqpg.pU_wkoC3T2'
-     '-Zx6TOV3hMWa288E_WNZao0ClKi9wNK0w')
+    ('Кукуруза', 'Кукуруза', '200', '240', 'Вкусно и точка',
+     'https://cdn.100sp.ru/pictures/949697343'),
+    ('БУ Кукуруза', 'БУ Кукуруза', '300', '290', 'Уже была использована',
+     'https://nn.zenmod.shop/image/cache/catalog/Liquid/Capella/popcorn-800x800.jpg?1470746552'),
+    ('Огурец', 'Огурец гладкий', '70', '90', 'Слегка залежался',
+     'https://main-cdn.sbermegamarket.ru/hlr-system/703/963/118/221/18/100048551482b0.jpg')
 ])
 def test_edit_item(start_page, oldname, newname, oldprice, newprice, info, url):
     start_page.navigate()
