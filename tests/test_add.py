@@ -4,13 +4,13 @@ import pytest
 
 
 @pytest.mark.parametrize('name, price, info, url', [
-    ('Бэтмобиль', '300000', 'Совсем как настоящий',
-     'https://avatars.mds.yandex.net/get-vertis-journal/4469561/2019-10-03-61eb0625626a4f379b15b42b50acdc56'
+    ('Кукуруза', '200', 'Вкусно и точка',
+     'https://cdn.100sp.ru/pictures/949697343'
      '.jpg_1622735939741/orig'),
-    ('Бэтмобиль', '5000', 'А вот этот уже не совсем настоящий',
-     'https://main-cdn.sbermegamarket.ru/big2/hlr-system/1657928/100000377360b0.jpg'),
-    ('RTX 5080', '160000', 'Точно не сгорит',
-     'https://avatars.mds.yandex.net/get-mpic/2017233/2a00000194d1ca1993d378c741a79bea88e4/orig')
+    ('БУ кукуруза', '300', 'Уже была использована',
+     'https://nn.zenmod.shop/image/cache/catalog/Liquid/Capella/popcorn-800x800.jpg?1470746552'),
+    ('Огурец', '70', 'Свежий, только сорванный с грядки',
+     'https://main-cdn.sbermegamarket.ru/hlr-system/703/963/118/221/18/100048551482b0.jpg')
 ])
 def test_adding_new_item(start_page, name, price, info, url):
     start_page.navigate()
